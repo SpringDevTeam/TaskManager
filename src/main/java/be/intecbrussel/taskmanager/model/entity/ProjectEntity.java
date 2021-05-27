@@ -10,7 +10,7 @@ import javax.persistence.Entity;
 @Builder
 @Getter
 @Setter
-public class Project extends BaseEntity {
+public class ProjectEntity extends BaseEntity {
 
     private String title;
     private String description;
