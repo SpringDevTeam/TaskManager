@@ -1,13 +1,14 @@
 package be.intecbrussel.taskmanager.service;
 
-import be.intecbrussel.taskmanager.model.JobTitle;
 import be.intecbrussel.taskmanager.model.entity.UserEntity;
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Service;
+import java.util.Collection;
 
-import java.util.Set;
-
-public interface UserService extends CrudRepository {
-    Set<UserEntity> findByFirstName (String firstName);
-    Set<UserEntity> findByLastName (String lastName);
-    Set<UserEntity> findByJobTitle (JobTitle jobTitle);
+@Service
+public interface UserService  {
+    UserEntity getUserById (Long id);
+    UserEntity saveUser (UserEntity userEntity);
+    UserEntity updateUser(UserEntity userEntity);
+    void deleteUser(UserEntity userEntity);
+    Collection<UserEntity> getAllUserEntities();
 }
