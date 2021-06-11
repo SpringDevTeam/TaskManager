@@ -2,17 +2,16 @@ package be.intecbrussel.taskmanager.model.entity;
 
 import be.intecbrussel.taskmanager.model.JobTitle;
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 
-import javax.persistence.Entity;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.Set;
 
-@AllArgsConstructor
-@RequiredArgsConstructor
-@Builder
+@Entity
 @Getter
 @Setter
-@Entity
+@SuperBuilder
+@NoArgsConstructor
 public class UserEntity extends BaseEntity{
     private String firstName;
     private String lastName;
