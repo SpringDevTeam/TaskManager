@@ -1,17 +1,15 @@
 package be.intecbrussel.taskmanager.model.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
-import lombok.Setter;
+import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 import javax.persistence.*;
 
 @MappedSuperclass
 @Getter
 @Setter
-@AllArgsConstructor
-@RequiredArgsConstructor
+@SuperBuilder
+@NoArgsConstructor
 public class BaseEntity {
 
     @Id
