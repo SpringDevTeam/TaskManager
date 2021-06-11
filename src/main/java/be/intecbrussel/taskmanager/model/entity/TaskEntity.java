@@ -1,19 +1,17 @@
 package be.intecbrussel.taskmanager.model.entity;
 
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 import javax.persistence.Entity;
 import java.util.Date;
 
 @Entity
-@AllArgsConstructor
-@NoArgsConstructor
-@Builder
 @Getter
 @Setter
-//@Data
+@SuperBuilder
+@NoArgsConstructor
 public class TaskEntity extends BaseEntity{
-
 
    private String title;
    private String description;
@@ -23,6 +21,4 @@ public class TaskEntity extends BaseEntity{
    private Date deadline;
 //   private Set<UserEntity> users;
 //   private ProjectEntity project;
-
-
 }
